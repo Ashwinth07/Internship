@@ -18,3 +18,10 @@ def square(x):
 numbers = [1, 2, 3, 4, 5]
 squared_numbers = list(map(square, numbers))
 print(squared_numbers)
+#Converting Fahrenheit to Celsius:
+def fahrenheit_to_celsius(f):
+    return (f - 32) * 5/9
+
+temperatures_in_fahrenheit = [32, 68, 100, 212]
+temperatures_in_celsius = map(fahrenheit_to_celsius, temperatures_in_fahrenheit)
+print(list(temperatures_in_celsius)) 
