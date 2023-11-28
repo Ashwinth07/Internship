@@ -6,3 +6,4 @@ SELECT
     email
 FROM my_schema.students;
 SELECT * FROM my_schema.students_info;
+
