@@ -1,10 +1,10 @@
 from flask import Flask
 
-app = Flask(__name__)
+helloworld = Flask(__name__)
 
-@app.route('/')
-def hello():
-    return 'Hello, World!'
+@helloworld.route('/')
+def run():
+    return "{\"message\":\"Hey there python\"}"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    helloworld.run(host="0.0.0.0",port=int("3000"),debug=True)
