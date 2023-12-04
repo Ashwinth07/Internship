@@ -3,7 +3,7 @@ from models.feedback import db, Feedback
 
 feedback = Blueprint('feedback', __name__)
 
-@feedback.route('/')
+@feedback.route('/index.html')
 def index():
     return render_template('index.html')
 

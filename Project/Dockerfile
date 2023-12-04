@@ -8,7 +8,7 @@ COPY . /app
 
 RUN pip install -r requirements.txt
 
-EXPOSE 3000
+EXPOSE 4000
 
 ENV ENV=dev
 
