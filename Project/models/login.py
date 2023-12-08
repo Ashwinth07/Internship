@@ -6,8 +6,8 @@ class MongoData:
 
     def to_dict(self):
         return {
-            'Username': self.field1,
-            'Password': self.field2,
+            'username': self.field1,
+            'password': self.field2,
         }
         
         # use camelCase 

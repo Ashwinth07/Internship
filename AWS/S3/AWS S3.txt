@@ -1,0 +1,99 @@
+What is S3? 
+
+1.	Simple Storage Service, Its comes under storage service in AWS
+2.	You can use to store and retrieve any amount of data, at any time, from anywhere on the web.
+3.	S3 acts like a webserver also.
+4.	Pay for wat we use.
+5.	Secured 
+6.	S3 is total unlimited storage 
+
+Two Concept in S3?
+•	Bucket 
+•	Object 
+
+Bucket: 
+
+1.	Bucket Name should be unique.
+2.	Basic storage unit , are container for data stored 
+3.	Name of the bucket should be globally unique (Application , Environment , Current date )
+4.	No size restriction for bucket 
+5.	upload and download are easier 
+6.	100 Buckets per account.
+7.	30/40 bucket in real time scenario
+8.	If need more bucket contact amazon support to upgrade. 
+
+Object:
+
+1.	Each and everything stores inside the bucket is called object (text, jpeg, etc..)
+2.	Object Size should be max 5TB.
+3.	Any server present in any region we can access this bucket which can i create S3 Globally.
+
+Bucket Create -> create bucket - bucket name - region - block access remove (ACL) bucket is public - create Bucket.
+
+Inside the bucket called objects -> upload- select files (create file) - people called metadata (data about data) - add upload option.
+
+OBJECT LEVEL PROPERTIES:
+1.	Details 
+    a)	Bucket Overview – Region, ARN, Creation Date.
+    b)	Bucket Versioning 
+    c)	Tags
+    d)	Default Encryption 
+    e)	Intelligent Tiering archiving Configuration 
+    f)	Event Notification 
+    g)	Transfer Acceleration 
+    h)	Object Lock 
+    i)	Requestor Pay
+    j)	Static web hosting 
+
+2.	Permission 
+    a)	Permission over view 
+    b)	Which can access the bucket (Public or private)
+    c)	Bucket Policy 
+    d)	Object Ownership: Object Owner ship, Object Writer
+    e)	Access Control List (ACL) – Basic read & write access to other AWS Account 
+
+3.	Metrics – Total Bucket Size, Total number of object.
+4.	Management – Life cycle rules, replications rules. 
+5.	Access Points – Simply Accessing data access, Named as network Endpoints, Attached to the bucket that you can use to perform S3 Object Operations.
+
+
+Bucket Versioning:
+
+Versioning is a means of keeping multiple variants of an object in the same bucket. You can use versioning to preserve, retrieve, and restore every version of every object stored in your Amazon S3 bucket. With versioning, you can easily recover from both unintended user actions and application failures.
+
+Versioning: Works like a devops tool, GIT, SVN, Version controlling tool.
+
+1.	Multiple version of file in same object. 
+
+2.	Recover and delete object:  Need to enable Versioning first - enable list version - delete marker is delete means object file is recover in object. 
+
+3.	Lifecycle Rules - automatically move one cycle to another cycle period storage class.
+
+4.	Replication Rules – Manually Backup for critical data – Destination path – Versioning – Existing bucket or new bucket.
+
+List Version: If it’s enable we can see the Old file & updated saved file – Tree Hierarchy.
+
+Tagging: Data for your data it’s also called as META Data.
+
+Encryption:  Security Use, Client Trusted 
+
+2 types of Encryption Algorithm 
+
+a)	Amazon S3 key (SSE-S3)
+b)	AWS key management service key (SSE- KMS).
+
+Intelligent Tiering Archiving config: Monitoring, amazon will said with storage class is ok.
+
+Server access Logging: Buckets level information is logs, who are all access my buckets they stored my logs in server access.
+
+Cloud trail: Object level information Logs, Separate Service in amazon, where my log in console called Cloud trail.
+(Trail - create trail - xxxx- which bucket my object should be enabled - log files is in JSON format - object related information -- save)
+
+Notification: Event Alert Mechanism – (SNS, SQS Notification) 
+
+Transfer Acceleration: If enables Storing & Retrieving is Faster, COST is double.
+
+Object Lock:  If we enable the object Lock it’s permanently lock, if need to disable contact amazon support.
+
+Requester Pays: If enable requester pay for request and data transfer cost, Unwanted action to this bucket is disabled.
+Static Web Hosting: Its looks like a webserver.

@@ -1,0 +1,51 @@
+Amazon EC2:
+
+1. Virtual Computing Environment:
+    Amazon Elastic Compute Cloud (EC2) offers resizable compute capacity in the cloud.
+    It allows users to rent virtual servers (known as instances) and run applications on them.
+
+2. Flexibility and Scalability:
+    EC2 provides a wide selection of instance types optimized for various use cases.
+    Users can scale computing resources up or down based on demand.
+
+3. Pricing Model:
+    Users pay for what they use (pay-as-you-go) based on instance type, usage hours, and data transfer.
+    Reserved Instances and Spot Instances offer pricing models for long-term and cost-effective use.
+
+4. Instance Types:
+    EC2 offers various instance families (e.g., general-purpose, compute-optimized, memory-optimized) catering to different workload requirements.
+
+5. Operating Systems and Customization:
+    - Supports various operating systems (Linux, Windows) and allows customization of configurations, such as CPU, memory, storage, and networking.
+
+Key Concepts:
+
+1. Instances:
+    - Virtual servers in the cloud that run applications and host data.
+    - Users can launch, manage, and terminate instances based on their requirements.
+
+2. AMI (Amazon Machine Image):
+    - A template that contains the software configuration (OS, application server, applications) required to launch an instance.
+
+3. Security Groups:
+    - Acts as a virtual firewall controlling inbound/outbound traffic for instances.
+    - Users define rules to allow or deny specific traffic types and sources.
+
+4. EBS (Elastic Block Store):
+    - Provides block-level storage volumes for use with EC2 instances.
+    - Offers persistent and highly available storage volumes that can be attached/detached from instances.
+
+5. Key Pairs:
+    - Used for secure access to instances.
+    - Users create key pairs, and the public key is used to encrypt login information.
+
+6. Elastic IP:
+    - A static public IP address that can be associated with an EC2 instance.
+    - Helps in maintaining a consistent IP address for an instance even after stopping/restarting.
+
+7. Auto Scaling:
+    - Automatically adjusts the number of instances based on predefined conditions (e.g., traffic load, resource utilization) to maintain performance.
+
+8. Load Balancing:
+    - Distributes incoming traffic across multiple instances to ensure high availability and fault tolerance.
+

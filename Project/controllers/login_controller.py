@@ -1,11 +1,9 @@
 from flask import Blueprint, request, jsonify, render_template
 from pymongo import MongoClient
-from models.mongo_data import MongoData
-
+from models.login import MongoData
+from app import mongo_db
 
 mongo_data = Blueprint('mongo_data', __name__)
-mongo_client = MongoClient('mongodb+srv://ashwinth:12345@cluster0.lao3ol1.mongodb.net/Users?retryWrites=true&w=majority')
-mongo_db = mongo_client['Users'] 
 @mongo_data.route('/')
 def index():
     return render_template('Forms.html')

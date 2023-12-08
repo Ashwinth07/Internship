@@ -1,0 +1,46 @@
+Petrus Connect
+Petrus Connect is a monitoring system created with the aim to oversee CNC (Computer Numerical Control) machines. It's available in two versions: Petrus Connect 1.0 and Petrus Connect 2.0. The system was initiated 1.5 years ago.
+
+Purpose
+•	Data Collection: It's utilized to gather data from machines using PLC (Programmable Logic Controllers). This data includes machine statuses like idle, running, or under maintenance, which are then displayed on a dashboard.
+•	Reports: Enables the creation of various reports based on the collected data.
+
+Evaluation Metrics
+•	Performance Measurement: Uses evaluation metrics to calculate the performance of machines.
+•	O.E.E (Overall Equipment Effectiveness): This is a key parameter used to measure machine performance, calculated based on three metrics: Availability, Performance, and Quality.
+
+O.E.E Calculation
+•	Availability: Calculated as the ratio of machine runtime to planned production time.
+•	Performance: Measures the actual production against the target.
+•	Quality: Assesses the ratio of good products to total products produced.
+
+Industrial 4.0 Integration
+•	Purpose: Aims to increase efficiency, productivity, and decrease product rejection.
+•	Petrus Connect 1.0: Initially used the PMS (Production Monitoring System) model to replace traditional pen-paper methods for more accurate O.E.E measurements.
+•	Petrus Connect 2.0: Utilizes four models - PMS, CMS, QMS, MMS, and HMI for more comprehensive monitoring and management.
+
+Petrus Connect 2.0 Models
+•	PMS: Production Monitoring System.
+•	CMS: Condition-Based Monitoring System.
+•	QMS: Quality Monitoring System.
+•	MMS: Maintenance Management System.
+•	HMI: Human-Machine Interface.
+This overview highlights how Petrus Connect evolved from its initial version to a more comprehensive system, integrating various models to enhance monitoring, maintenance, quality control, and human-machine interaction for efficient CNC machine management.
+
+Scenario:
+•	Shift Hours: 8 hours
+•	Planned Production Time: 8 hours (no downtime planned)
+•	Actual Machine Runtime: 7 hours (1 hour downtime due to maintenance)
+•	Target Production: 100 parts
+•	Actual Parts Produced: 80 parts
+•	Good Quality Parts: 70 parts out of 80 produced
+
+Calculation:
+1.	Availability: Availability = Actual Runtime / Planned Production Time Availability = 7 / 8 = 0.875 (or 87.5%)
+2.	Performance: Performance = Actual Parts Produced / Target Production Performance = 80 / 100 = 0.8 (or 80%)
+3.	Quality: Quality = Good Quality Parts / Total Parts Produced Quality = 70 / 80 = 0.875 (or 87.5%)
+4.	O.E.E: O.E.E = Availability × Performance × Quality O.E.E = 0.875 (Availability) × 0.8 (Performance) × 0.875 (Quality) = 0.61 (or 61%)
+
+Interpretation:
+In this scenario, the Overall Equipment Effectiveness (O.E.E) of the CNC machine is 61%. This means that the machine, during the shift, operated at 61% of its maximum potential efficiency, considering factors like availability, performance, and quality.
+This O.E.E value helps identify areas for improvement. For instance, despite good quality output, downtime (availability) and production rate (performance) could be targeted for improvement to enhance overall efficiency.

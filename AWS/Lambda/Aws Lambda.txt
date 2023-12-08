@@ -1,0 +1,46 @@
+AWS Lambda:
+
+1. Serverless Compute Service:
+    - AWS Lambda is a serverless compute service allowing you to run code without provisioning or managing servers.
+    - It automatically scales and manages infrastructure needed to run code in response to triggers.
+
+2. Event-Driven Architecture:
+    - Lambda functions are triggered by various AWS services or events like changes in S3 buckets, DynamoDB updates, API Gateway requests, etc.
+    - Supports custom triggers via AWS SDKs or API calls.
+
+3. Pay-as-You-Go Model:
+    - Users are charged only for the compute time consumed by their code, with no charges when code is not running.
+
+4. Supported Runtimes and Languages:
+    - Supports multiple programming languages such as Python, Node.js, Java, Ruby, Go, .NET Core, etc.
+    - Users can write their functions in their preferred language.
+
+Key Concepts:
+
+1. Lambda Functions:
+    - Pieces of code that run in response to triggers/events.
+    - You can upload code packages (ZIP or container images) or use the inline editor.
+
+2. Triggers:
+    - Events that invoke Lambda functions. These can be AWS services (S3, DynamoDB, SNS), API calls (API Gateway), or custom events.
+    - Lambda functions respond to these triggers without the need for manual intervention.
+
+3. Execution Environment:
+    - Lambda manages the execution environment, including infrastructure, scaling, and runtime updates.
+    - Supports resource allocation (memory, CPU) configuration for functions.
+
+4. Concurrency and Scaling:
+    - Automatically scales based on incoming events. Each concurrent execution processes one event at a time by default.
+    - Users can configure reserved concurrency and adjust it based on requirements.
+
+5. Integration with Other Services:
+    - Integrates seamlessly with various AWS services, allowing serverless architecture for building event-driven applications.
+
+6. Permissions and Security:
+    - Lambda functions have execution roles granting permissions to access AWS resources.
+    - Supports encryption, security configurations, and IAM policies for fine-grained access control.
+
+7. Monitoring and Logging:
+    - CloudWatch provides logs and metrics for monitoring Lambda function performance, errors, and invocations.
+    - Users can set up alarms and dashboards for monitoring.
+

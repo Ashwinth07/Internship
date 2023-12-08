@@ -1,28 +1,28 @@
+import os
 from flask import Flask
-from controllers.feedback_controller import feedback
 from models.feedback import db
 from flask_sqlalchemy import SQLAlchemy
 from pymongo import MongoClient
-from controllers.mongo_data_controller import mongo_data
+from dotenv import load_dotenv
 
+load_dotenv()
 
 app = Flask(__name__)
-app.config['MONGO_URI'] = 'mongodb+srv://ashwinth:12345@cluster0.lao3ol1.mongodb.net/Users?retryWrites=true&w=majority'
-mongo_client = MongoClient(app.config['MONGO_URI'])
-mongo_db = mongo_client.Users
 
-if mongo_db is not None:
-    print("Connected to MongoDB")
-else:
-    print("Failed to connect to MongoDB")
-
-ENV = 'dev'
+ENV = os.environ.get('FLASK_ENV', 'dev')
 
 if ENV == 'dev':
     app.debug = True
-    # get sensitive information from .env file 
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:12345@localhost:5432/lexus'
-    # move mongo db connection here 
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
+    mongo_uri = os.environ.get('MONGO_URI')
+    app.config['MONGO_URI'] = mongo_uri
+    mongo_client = MongoClient(app.config['MONGO_URI'])
+    mongo_db = mongo_client.Users
+
+    if mongo_db is not None:
+        print("Connected to MongoDB")
+    else:
+        print("Failed to connect to MongoDB")
 
 else:
     app.debug = False
@@ -31,9 +31,12 @@ else:
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
-
-app.register_blueprint(mongo_data)
-app.register_blueprint(feedback)
+def register_blueprints():
+    from controllers.feedback_controller import feedback
+    from controllers.login_controller import mongo_data
+    app.register_blueprint(mongo_data)
+    app.register_blueprint(feedback)
 
 if __name__ == '__main__':
+    register_blueprints()
     app.run(host="0.0.0.0", port=4000, debug=True)
